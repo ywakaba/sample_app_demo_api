@@ -4,6 +4,7 @@ class TodolistsController < ApplicationController
   end
 
   def create
+    logger.debug("enter create")
     list = List.new(list_params)
     list.save
 
